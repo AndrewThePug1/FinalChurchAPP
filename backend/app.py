@@ -27,10 +27,10 @@ if __name__ == '__main__':
     # Adjusted retrieval logic based on ChromaDB capabilities
     try:
         # Assuming the hash is stored in metadata, attempting to query based on metadata
-        # Note: Adjust the query as per the actual structure and capabilities of ChromaDB
+     
         query_result = collection.query(
             query_texts=[""],  # Provide an empty query text to satisfy the requirement
-            n_results=1,  # Assuming you only want one result
+            n_results=1,  
             where={"hash": test_hash}  # Using the where filter to search by hash
         )
         if query_result and query_result['documents']:
