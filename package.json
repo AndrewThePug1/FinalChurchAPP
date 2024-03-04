@@ -2,5 +2,13 @@
   "dependencies": {
     "crypto-js": "^4.2.0",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start-frontend\" \"npm run start-backend\"",
+    "start-frontend": "cd songs-viewer-app && npm start",
+    "start-backend": "cd backend && python app.py"
   }
 }
